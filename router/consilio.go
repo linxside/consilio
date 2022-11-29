@@ -42,6 +42,7 @@ func (s *ConsilioRouter) routes() {
 
 	// API endpoints
 	s.router.GET("/api", s.mw(s.handleGetAPI()))
+	s.router.DELETE("/api/import-state", s.mw(s.deleteImportStateHandler()))
 	s.router.OPTIONS("/api", s.mw(s.handleGetAPI()))
 
 	static := httprouter.New()
