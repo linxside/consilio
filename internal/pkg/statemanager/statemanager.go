@@ -17,6 +17,7 @@ func DeleteState(stateFileContent []byte) (err error) {
 			log.Println(resource.Addr.String())
 			for _, instance := range resource.Instances {
 				log.Println(instance.Current.AttrsJSON)
+				//TODO: Debug State representation
 			}
 		}
 	}
