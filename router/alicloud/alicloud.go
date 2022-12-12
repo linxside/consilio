@@ -1,12 +1,6 @@
 package alicloud
 
-import (
-	alicloud "github.com/aliyun/terraform-provider-alicloud/alicloud"
-	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
-	"github.com/kevinklinger/consilio/libs"
-	"github.com/kevinklinger/consilio/model"
-)
-
+/* Disable Alicloud due to compile issues
 var (
 	provider = alicloud.Provider().(*schema.Provider)
 )
@@ -27,3 +21,4 @@ func GetAliCloudFields() []model.DynamicElement {
 
 	return result
 }
+*/
