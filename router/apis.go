@@ -9,7 +9,6 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/kevinklinger/consilio/model"
-	libvirt "github.com/kevinklinger/consilio/router/kvm"
 	"github.com/pkg/errors"
 )
 
@@ -20,8 +19,10 @@ func (s *ConsilioRouter) handleGetAPI() httprouter.Handle {
 		var fields []model.DynamicElement
 
 		switch provider {
+		/* Disable libvirt provider, due to issues with open_terraform
 		case "libvirt":
 			fields = libvirt.GetLibvirtFields()
+		*/
 		case "azure":
 			rw.Header().Set("Content-Type", "application/json")
 			rw.WriteHeader(http.StatusOK)
