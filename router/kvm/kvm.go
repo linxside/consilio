@@ -1,6 +1,12 @@
 package libvirt
 
-/* Disable libvirt provider, due to issues with open_terraform
+import (
+	libvirtProvider "github.com/dmacvicar/terraform-provider-libvirt/libvirt"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
+	"github.com/kevinklinger/consilio/libs"
+	"github.com/kevinklinger/consilio/model"
+)
+
 var (
 	provider = libvirtProvider.Provider().(*schema.Provider)
 )
@@ -21,4 +27,3 @@ func GetLibvirtFields() []model.DynamicElement {
 
 	return result
 }
-*/

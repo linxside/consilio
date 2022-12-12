@@ -3,8 +3,7 @@ module github.com/kevinklinger/consilio
 go 1.14
 
 require (
-	github.com/coreos/go-systemd v0.0.0-20190719114852-fd7a80b32e1f // indirect
-	github.com/go-test/deep v1.0.4 // indirect
+	github.com/dmacvicar/terraform-provider-libvirt v0.6.3
 	github.com/google/martian/v3 v3.2.1
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/hashicorp/hcl v1.0.0
